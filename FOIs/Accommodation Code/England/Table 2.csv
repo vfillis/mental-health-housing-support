@@ -1,0 +1,127 @@
+Table 2: ,The number of people in contact with adult mental health services (aged 18 to 69) and the number of people in adult mental health services (aged 18 to 69) who are on CPA (Care Programme Approach) with accommodation status recorded as specified in M003010 (Data Set Specification (Amd 43/2019) file) in 2019.,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+"In 2019, the number of people in contact with adult mental health services (aged 18 to 69) with accommodation status recorded as specified in M003010 (Data Set Specification (Amd 43/2019) file).",,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Accommodation Status Code,Accommodation Status,Jan-19,Feb-19,Mar-19,Apr-19,May-19,Jun-19,Jul-19,Aug-19,Sep-19,Oct-19,Nov-19,Dec-19
+CH00,Accommodation with other (not specialist mental health) care support ,1580,1562,1557,1712,1699,1677,1646,1697,1693,1682,1670,1672
+CH01,Foyer - accommodation for young people aged 16-25 who are homeless or in housing need,52,54,54,49,53,50,65,50,57,57,58,59
+CH02,Refuge,216,238,241,222,224,233,222,225,224,242,242,227
+CH03,Non-Mental Health Registered Care Home ,944,920,915,868,835,850,854,822,846,843,871,892
+CH09,Other accommodation with care and support (not specialist mental health),2193,2174,2189,1879,1865,1847,1879,1858,1896,1937,1970,1956
+CJ00,Accommodation with criminal justice support ,136,142,136,420,495,485,473,478,493,477,477,477
+CJ01,Bail/Probation hostel,159,166,164,115,107,109,114,110,121,125,127,116
+CJ02,Prison,347,345,351,268,263,266,260,252,233,238,250,246
+CJ03,Young Offender Institution,5,6,7,7,8,8,6,7,8,9,8,5
+CJ04,Detention Centre,13,12,12,12,15,17,17,15,10,10,12,8
+CJ05,Young Offender Institution (15-17),0,0,0,0,0,0,0,0,0,0,0,0
+CJ06,Young Offender Institution (18-21),0,0,0,0,0,0,0,0,1,1,2,1
+CJ07,Secure Children's Home (Secure Welfare Accommodation only),0,0,0,0,0,0,0,0,0,0,0,0
+CJ08,Secure Children's Home (Youth Detention Accommodation only),0,0,0,0,0,0,0,0,0,0,0,0
+CJ10,Secure Children's Home (Secure Welfare Accommodation and Youth Detention Accommodation),0,0,0,0,0,0,0,0,0,0,0,0
+CJ11,Secure Training Centre,0,0,0,0,0,0,0,0,0,0,0,0
+CJ12,Other accommodation with criminal justice support,0,0,0,11,10,12,8,14,11,11,13,13
+HM00,Homeless ,1838,1845,1849,2307,2360,2383,2374,2362,2403,2449,2445,2424
+HM01,Rough sleeper,482,479,472,392,402,372,369,355,369,394,398,397
+HM02,Squatting,692,686,685,600,543,513,482,452,441,444,424,401
+HM03,"Night shelter/emergency hostel/Direct access hostel (temporary accommodation accepting self referrals, no waiting list and relatively frequent vacancies)",1046,1093,1097,1004,969,932,884,861,845,851,850,828
+HM04,Sofa surfing (sleeps on different friends floor each night),703,704,697,605,582,594,598,612,619,651,666,664
+HM05,Placed in temporary accommodation by Local Authority (including Homelessness resettlement service) e.g. Bed and Breakfast accommodation,2511,2521,2535,2287,2260,2238,2189,2136,2086,2088,2096,2050
+HM06,Staying with friends/family as a short term guest,5155,5043,4962,4839,4836,4862,4848,4776,4907,4958,4938,4840
+HM07,Other homeless,1253,1276,1324,1055,1038,1042,1028,1026,1023,1003,1052,1043
+HS00,Acute/long stay healthcare residential facility/hospital ,1026,1016,1014,1570,1653,1667,1686,1683,1673,1663,1666,1698
+HS01,NHS acute psychiatric ward,716,712,726,592,598,585,585,586,566,565,570,593
+HS02,Independent hospital/clinic,545,530,534,510,499,498,487,480,461,463,464,471
+HS03,Specialist rehabilitation/recovery,984,988,964,859,845,820,820,819,840,848,823,835
+HS04,Secure psychiatric unit,2828,2878,2910,2706,2685,2697,2725,2757,2792,2811,2828,2860
+HS05,Other NHS facilities/hospital,459,465,464,457,453,437,457,471,469,472,471,469
+HS09,Other acute/long stay healthcare residential facility/hospital,549,536,534,460,454,460,461,462,473,481,474,454
+MA00,Mainstream Housing ,48863,49714,49816,61873,63128,63415,63759,63621,64100,61850,62331,62398
+MA01,Owner occupier,31297,30847,30420,28137,28054,27929,27851,27589,27587,27998,28243,28161
+MA02,Settled mainstream housing with family/friends,37285,37604,37831,35177,35317,35265,35240,35332,35499,36629,37017,37050
+MA03,Shared ownership scheme e.g. Social Homebuy Scheme (tenant purchase percentage of home value from landlord),506,519,519,468,422,424,430,429,434,442,428,420
+MA04,Tenant - Local Authority/Arms Length Management Organisation/Registered Landlord,23572,23316,22907,20991,20665,20565,20308,20145,19949,20085,20183,20103
+MA05,Tenant - Housing Association,25665,25841,25700,23313,23058,22958,22827,22688,22724,23274,23487,23389
+MA06,Tenant - private landlord,20241,20234,20112,18454,18434,18263,18110,17950,17977,18414,18641,18643
+MA09,Other mainstream housing,8691,8779,8873,7035,6549,6541,6578,6446,6385,9659,9726,9841
+MH00,Accommodation with mental health care support ,3706,3675,3690,4854,5342,5355,5369,5407,5435,5426,5506,5529
+MH01,Supported accommodation (accommodation supported by staff or resident caretaker),9211,9225,9154,8548,8283,8305,8293,8188,8273,8514,8645,8714
+MH02,Supported lodgings (lodgings supported by staff or resident caretaker),402,405,416,388,381,358,358,373,366,375,381,378
+MH03,Supported group home (supported by staff or resident caretaker),1736,1696,1665,1652,1663,1632,1617,1587,1623,1683,1696,1704
+MH04,Mental Health Registered Care Home ,2812,2807,2752,2584,2488,2382,2356,2313,2314,2386,2381,2353
+MH09,Other accommodation with mental health care and support,1454,1479,1478,1374,1361,1319,1294,1287,1300,1311,1318,1341
+ML00,Mobile accommodation ,171,174,189,207,232,242,232,236,238,244,253,244
+OC96,Not elsewhere classified,2416,2388,2400,1922,1752,1703,1658,1669,1660,1656,1633,1611
+OC97,Not specified,3093,3159,3163,2574,2586,2632,2687,2762,2789,2926,3071,3086
+OC98,Not applicable,409,439,444,388,401,401,405,423,437,427,415,412
+OC99,Not Known (Not Recorded),27552,27143,27259,29776,30579,30848,31309,31469,31707,31900,31869,31662
+SH00,"Sheltered Housing (accommodation with a scheme manager or warden living on the premises or nearby, contactable by an alarm system if necessary) ",643,634,627,752,742,749,751,756,778,800,827,823
+SH01,Sheltered housing for older persons,335,364,379,331,332,327,324,316,323,324,324,313
+SH02,"Extra care sheltered housing (also known as 'very sheltered housing'. For people who are less able to manage on their own, but who do need an extra level of care. Services offered vary between schemes, but meals and some personal care are often provided.)",165,166,165,135,126,116,119,120,125,124,127,117
+SH03,Nursing Home for older persons,652,639,623,609,611,602,599,593,599,612,607,597
+SH09,Other sheltered housing,531,535,541,445,428,416,416,409,416,412,410,399
+,Other ,59,60,60,630,597,563,555,545,513,513,629,713
+,Total,277899,278233,277576,278423,279282,278964,278982,278019,279111,283757,286013,285700
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+"In 2019, the number of people in adult mental health services (aged 18 to 69) who are on CPA (Care Programme Approach) with accommodation status recorded as specified in M003010 (Data Set Specification (Amd 43/2019) file).",,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Accommodation Status Code,Accommodation Status,Jan-19,Feb-19,Mar-19,Apr-19,May-19,Jun-19,Jul-19,Aug-19,Sep-19,Oct-19,Nov-19,Dec-19
+CH00,Accommodation with other (not specialist mental health) care support ,367,359,353,445,453,474,479,488,500,507,502,493
+CH01,Foyer - accommodation for young people aged 16-25 who are homeless or in housing need,22,23,22,18,18,15,19,17,19,19,18,16
+CH02,Refuge,59,61,60,53,51,52,51,49,48,49,52,50
+CH03,Non-Mental Health Registered Care Home ,149,144,151,112,105,110,108,107,97,108,112,113
+CH09,Other accommodation with care and support (not specialist mental health),409,440,446,324,297,306,318,309,310,330,340,321
+CJ00,Accommodation with criminal justice support ,67,70,66,144,160,165,161,164,170,261,176,185
+CJ01,Bail/Probation hostel,38,41,39,30,25,29,29,32,42,37,37,31
+CJ02,Prison,163,166,158,117,118,119,117,114,111,112,122,127
+CJ03,Young Offender Institution,3,3,4,2,2,2,1,1,1,2,2,2
+CJ04,Detention Centre,3,4,5,6,6,6,7,6,4,4,5,5
+CJ05,Young Offender Institution (15-17),0,0,0,0,0,0,0,0,0,0,0,0
+CJ06,Young Offender Institution (18-21),0,0,0,0,0,0,0,0,1,1,1,1
+CJ07,Secure Children's Home (Secure Welfare Accommodation only),0,0,0,0,0,0,0,0,0,0,0,0
+CJ08,Secure Children's Home (Youth Detention Accommodation only),0,0,0,0,0,0,0,0,0,0,0,0
+CJ10,Secure Children's Home (Secure Welfare Accommodation and Youth Detention Accommodation),0,0,0,0,0,0,0,0,0,0,0,0
+CJ11,Secure Training Centre,0,0,0,0,0,0,0,0,0,0,0,0
+CJ12,Other accommodation with criminal justice support,0,0,0,7,6,6,5,6,4,3,3,3
+HM00,Homeless ,764,762,774,970,1000,1015,1021,1049,1048,1107,1077,1081
+HM01,Rough sleeper,136,137,134,113,119,118,119,123,130,130,137,133
+HM02,Squatting,170,176,168,168,158,160,152,154,163,166,171,179
+HM03,"Night shelter/emergency hostel/Direct access hostel (temporary accommodation accepting self referrals, no waiting list and relatively frequent vacancies)",344,350,359,322,322,313,306,305,315,317,319,315
+HM04,Sofa surfing (sleeps on different friends floor each night),215,213,214,183,174,171,167,173,176,176,184,167
+HM05,Placed in temporary accommodation by Local Authority (including Homelessness resettlement service) e.g. Bed and Breakfast accommodation,924,928,926,872,920,909,881,875,857,867,878,881
+HM06,Staying with friends/family as a short term guest,1592,1568,1496,1430,1410,1383,1395,1362,1393,1409,1404,1336
+HM07,Other homeless,475,487,494,430,415,419,414,405,400,398,437,424
+HS00,Acute/long stay healthcare residential facility/hospital ,614,602,600,1082,1130,1135,1135,1138,1134,1218,1135,1158
+HS01,NHS acute psychiatric ward,550,545,559,441,447,445,445,441,431,428,428,433
+HS02,Independent hospital/clinic,440,425,427,409,395,411,400,388,367,382,380,379
+HS03,Specialist rehabilitation/recovery,781,773,752,660,645,627,632,632,649,661,646,645
+HS04,Secure psychiatric unit,2539,2601,2627,2454,2446,2447,2469,2494,2535,2567,2595,2585
+HS05,Other NHS facilities/hospital,356,359,363,367,368,350,366,382,376,371,362,356
+HS09,Other acute/long stay healthcare residential facility/hospital,291,292,276,199,203,214,220,215,214,221,232,221
+MA00,Mainstream Housing ,13668,13908,13782,18851,19470,19907,20264,20274,20516,20808,20155,20303
+MA01,Owner occupier,8950,8969,8851,8033,7992,7908,7881,7791,7806,7936,7945,7864
+MA02,Settled mainstream housing with family/friends,11965,12165,12182,11310,11207,11063,11111,11005,10979,11355,11452,11428
+MA03,Shared ownership scheme e.g. Social Homebuy Scheme (tenant purchase percentage of home value from landlord),152,154,156,132,129,131,131,134,134,136,128,129
+MA04,Tenant - Local Authority/Arms Length Management Organisation/Registered Landlord,9648,9659,9482,8827,8669,8595,8466,8370,8206,8274,8310,8282
+MA05,Tenant - Housing Association,11307,11499,11476,10090,10025,9893,9848,9784,9672,9829,9850,9733
+MA06,Tenant - private landlord,6164,6238,6146,5590,5562,5428,5396,5298,5246,5327,5369,5284
+MA09,Other mainstream housing,2800,2881,2927,2233,1994,1968,2004,1934,1893,2701,2799,2779
+MH00,Accommodation with mental health care support ,2214,2162,2192,2821,3009,3030,3072,3062,3075,3612,3123,3129
+MH01,Supported accommodation (accommodation supported by staff or resident caretaker),5107,5155,5115,4639,4467,4499,4509,4445,4479,4579,4583,4539
+MH02,Supported lodgings (lodgings supported by staff or resident caretaker),167,188,189,168,170,164,167,168,166,167,172,168
+MH03,Supported group home (supported by staff or resident caretaker),589,582,564,516,515,501,499,473,479,492,481,464
+MH04,Mental Health Registered Care Home ,1710,1705,1694,1529,1504,1464,1439,1409,1415,1440,1416,1374
+MH09,Other accommodation with mental health care and support,963,1004,988,915,912,890,866,852,867,875,880,887
+ML00,Mobile accommodation ,52,56,62,64,66,65,69,72,70,96,73,68
+OC96,Not elsewhere classified,666,663,660,420,365,366,354,362,351,337,340,329
+OC97,Not specified,668,654,664,482,503,510,507,486,460,476,490,517
+OC98,Not applicable,110,118,113,110,119,129,126,142,131,124,117,125
+OC99,Not Known (Not Recorded),4675,4665,4642,4800,4808,4793,4911,4892,4870,4989,4793,4779
+SH00,"Sheltered Housing (accommodation with a scheme manager or warden living on the premises or nearby, contactable by an alarm system if necessary) ",260,255,254,334,339,350,350,356,364,378,396,398
+SH01,Sheltered housing for older persons,120,138,149,134,125,118,133,128,131,132,119,120
+SH02,"Extra care sheltered housing (also known as 'very sheltered housing'. For people who are less able to manage on their own, but who do need an extra level of care. Services offered vary between schemes, but meals and some personal care are often provided.)",76,81,79,60,59,55,59,57,59,62,64,60
+SH03,Nursing Home for older persons,234,226,224,218,222,204,209,212,208,216,226,219
+SH09,Other sheltered housing,208,211,216,163,159,153,152,151,150,152,143,132
+,Other ,30,29,31,201,193,194,198,197,196,195,209,232
+,Total,93974,94894,94311,93998,93976,93779,94138,93483,93418,96539,95388,94982
