@@ -1,0 +1,224 @@
+---
+title: "Delayed discharges and hospital admissions"
+author: "Vanessa Fillis"
+date: "09/03/2021"
+output: html_document
+---
+
+# Delayed discharge: why does it happen and how often?  
+
+When a patient is discharged from an inpatient stay in a mental health unit, it can be that the discharged is being delayed - for various reasons. 
+
+The Mental Health Services Monthly Statistics include data about this.
+
+## Activating packages
+
+```{r}
+library(lubridate)
+library(tidyr)
+library(dplyr)
+```
+
+## Importing the data 
+
+In a previous step I have downloaded data for Mental Health Services Monthly Statistics between April 2019 and January 2021 (as this was the latest data release) from [NHS Digital](https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics/). I have already merged them, so that I only have one CSV to import. 
+
+```{r}
+MHSDS <- read.csv("MHSDS2019to2021.csv", stringsAsFactors = FALSE)
+```
+
+## Inspecting the data frame
+
+Inspecting **MHSDS** shows that the columns containing the date and the value are in character format. We need them as date and numeric format. 
+
+Additionally the headers are repeated several times in the data frame. This probably is a result from merging the 23 different CSVs. 
+
+```{r}
+head(MHSDS)
+```
+
+### Cleaning the data frame
+
+```{r}
+MHSDS <- MHSDS[!(MHSDS$REPORTING_PERIOD_START =="REPORTING_PERIOD_START"),]
+MHSDS <- MHSDS[!(MHSDS$REPORTING_PERIOD_START =="REPORTING_PERIOD_END"),]
+```
+
+### Formating the date columns 
+
+There are two date columns: **REPORTING_PERIOD_START** and **REPORTING_PERIOD_END**. The date in there is stored in two different formats. Either as DD/MM/YYYY or as YYYY-MM-DD. 
+
+```{r}
+unique(MHSDS$REPORTING_PERIOD_START)
+```
+
+Using the *parse_date_time()* function from the *lubridate* package we can specify two orders that fit the way the date is structured in the **MHSDS** data frame. 
+
+```{r}
+MHSDS$start.reporting.period <- lubridate::parse_date_time(MHSDS$REPORTING_PERIOD_START, orders = c("dmy", "ymd"))
+
+MHSDS$end.reporting.period <- lubridate::parse_date_time(MHSDS$REPORTING_PERIOD_END, orders = c("dmy", "ymd"))
+```
+
+### Turning the value into numeric 
+
+When no data is available for a measure, there is an asterisk (*) instead of a number. 
+
+When we transform the **VALUE** column into numeric, NAs are replacing them. 
+
+```{r}
+MHSDS$MEASURE_VALUE <- as.numeric(MHSDS$MEASURE_VALUE)
+head(MHSDS)
+```
+
+## Reordering the data frame
+
+Now that we have transformed the date column from character into date and the value column into numeric, we can delete the columns we don't need anymore (for example the original date columns in character format). 
+
+We will also change the order of the remaining columns. 
+
+```{r}
+#Move the columns containing the date in the right format to the front
+MHSDS <- MHSDS %>%
+  relocate(start.reporting.period, end.reporting.period, .before = REPORTING_PERIOD_START)
+
+#Delete unneccessary columns such as the old date columns and the column containing the Status
+MHSDS <- MHSDS[-c(3:5)]
+```
+
+## Filter for England
+
+For now, we want to look only at national data and not at individual trusts.
+
+The column **BREAKDOWN** contains a breakdown into national, CCG and provider data. 
+
+When looking at delayed discharges, there is a special case we have to consider. 
+
+Additional information about delayed discharges is linked to 
+- "England; Delayed discharge attributable to"
+- "England; Delayed discharge reason" 
+
+in the **BREAKDOWN** column. 
+
+Therefore, we are not only filtering for "England", but also for "England; Delayed discharge attributable to" and "England; Delayed discharge reason".  
+
+```{r}
+MHSDS.England <- subset(MHSDS, MHSDS$BREAKDOWN == "England" | MHSDS$BREAKDOWN == "England; Delayed discharge attributable to" | MHSDS$BREAKDOWN == "England; Delayed discharge reason")
+```
+
+## Filter for number of open ward stays, admissions and discharges from hospital each month
+
+To get an initial overview over inpatient stays, we will first look at how many hospital admissions, open ward stays and discharges there are each month.  
+
+Data is stored in the following measures which we will filter for: 
+- **MHS27:**	Admissions to hospital in the RP
+- **MHS21:**	Open ward stays at the end of the reporting period 
+- **MHS28:**	Discharges from hospital in the RP
+
+```{r}
+#Filter
+MHSDS.England.discharges <- subset(MHSDS.England, MHSDS.England$MEASURE_ID == "MHS21" | MHSDS.England$MEASURE_ID == "MHS27" | MHSDS.England$MEASURE_ID == "MHS28")
+
+#Delete empty/unnecessary columns
+MHSDS.England.discharges <- MHSDS.England.discharges[-c(3:8)]
+
+#Restructure the data frame
+MHSDS.England.discharges <- MHSDS.England.discharges %>%
+  tidyr::pivot_wider(names_from = MEASURE_NAME, values_from = MEASURE_VALUE)
+
+#Rename columns
+MHSDS.England.discharges <- MHSDS.England.discharges %>%
+  rename(
+    open.ward.stays.endRP = `Open ward stays at the end of the reporting period`,
+    admissions.inRP = `Admissions to hospital in the RP`,
+    discharges.inRP = `Discharges from hospital in the RP`
+  )
+
+#Export
+write.csv(MHSDS.England.discharges, file = "MHSDS-England-admissions-discharges.csv")
+```
+
+## Filter for bed days and days of delayed discharge
+
+Next, we will look at the monthly days of delayed discharges and the overall monthly bed days. 
+
+Data is stored in the following measures which we will filter for: 
+- **MHS24**: Bed days in RP
+- **MHS26**: Days of delayed discharge in RP
+
+Filtering for MHS26	will also include the reasons and who the delayed discharge is attributed to. But right now we only want to look at the days. Therefore, we have to filter for cases where the **BREAKDOWN** is England. 
+
+```{r}
+#Filter
+MHSDS.England.delayed.discharges <- subset(MHSDS.England, MHSDS.England$BREAKDOWN == "England" & MHSDS.England$MEASURE_ID == "MHS24" | MHSDS.England$BREAKDOWN == "England" & MHSDS.England$MEASURE_ID == "MHS26")
+
+#Delete empty/unnecessary columns
+MHSDS.England.delayed.discharges <- MHSDS.England.delayed.discharges[-c(3:8)]
+
+#Restructure the data frame
+MHSDS.England.delayed.discharges <- MHSDS.England.delayed.discharges %>%
+  tidyr::pivot_wider(names_from = MEASURE_NAME, values_from = MEASURE_VALUE)
+
+#Calculate proportion of delayed discharge days on bed days 
+MHSDS.England.delayed.discharges$proportion.delayed.discharge.days <- MHSDS.England.delayed.discharges$`Days of delayed discharge in RP` / MHSDS.England.delayed.discharges$`Bed days in RP` * 100
+
+#Export
+write.csv(MHSDS.England.delayed.discharges, file = "MHSDS-England-delayed-discharges.csv")
+```
+
+### Filter for who the delayed discharge is attributable to
+ 
+Now we will look at which department the delayed discharge is attributable to. 
+
+To do so, we will filter for 
+- "England; Delayed discharge attributable to"
+- "MHS26: Days of delayed discharge in RP"
+
+Data is only available from April 2020. 
+
+```{r}
+#Filter
+MHSDS.England.DD.attributions <- subset(MHSDS.England, MHSDS.England$BREAKDOWN == "England; Delayed discharge attributable to" & MHSDS.England$MEASURE_ID == "MHS26")
+
+#Delete empty/unnecessary columns
+MHSDS.England.DD.attributions <- MHSDS.England.DD.attributions[-c(4,5,6,8,9)]
+
+#Restructure the data frame
+MHSDS.England.DD.attributions <- MHSDS.England.DD.attributions %>%
+  tidyr::pivot_wider(names_from = SECONDARY_LEVEL_DESCRIPTION, values_from = MEASURE_VALUE)
+
+#Add a column with total days of delayed discharges
+MHSDS.England.DD.attributions$total <-  rowSums(MHSDS.England.DD.attributions[,4:8])
+
+#Export
+write.csv(MHSDS.England.DD.attributions, file = "MHSDS-England-delayed-discharges-attributions.csv")
+```
+
+### Filter for delayed discharge reasons
+
+Next we will look at reasons for delayed discharges. 
+
+To do so, we will filter for 
+- "England; Delayed discharge reason"
+- "MHS26: Days of delayed discharge in RP"
+
+Data is only available from April 2020. 
+
+```{r}
+#Filter
+MHSDS.England.DD.reasons <- subset(MHSDS.England, MHSDS.England$BREAKDOWN == "England; Delayed discharge reason" & MHSDS.England$MEASURE_ID == "MHS26")
+
+#Delete empty/unnecessary columns
+MHSDS.England.DD.reasons <- MHSDS.England.DD.reasons[-c(4,5,6,8,9)]
+
+#Restructure the data frame
+MHSDS.England.DD.reasons <- MHSDS.England.DD.reasons %>%
+  tidyr::pivot_wider(names_from = SECONDARY_LEVEL_DESCRIPTION, values_from = MEASURE_VALUE)
+
+#Add a column with total days of delayed discharges
+MHSDS.England.DD.reasons$total <-  rowSums(MHSDS.England.DD.reasons[,4:30])
+
+#Export
+write.csv(MHSDS.England.DD.reasons, file = "MHSDS-England-delayed-discharges-reasons.csv")
+```
+
