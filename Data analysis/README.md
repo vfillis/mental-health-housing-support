@@ -10,7 +10,9 @@ The [Mental Health Services Monhtly Statistics](https://digital.nhs.uk/data-and-
 
 Mental Health Services Monhtly Statistics include data on monthly delayed discharge days, who the delayed discharge days are attributed to and the reasons for the delayed discharge days. 
 
-At first, I downloaded the CSVs from April 2019 to January 2021 (latest available data) and merged them using the command line (cat *.csv > MHSDS2019to2020.csv) _after navigating with “cd” to the folder containing the CSVs. 
+At first, I downloaded the CSVs from April 2019 to January 2021 (latest available data) and merged them using the command line 
+  *(cat *.csv > MHSDS2019to2020.csv)*
+  after navigating with “cd” to the folder containing the CSVs. 
 
 I then analysed the data in R. The script can be found [here](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/MHSDS-admissions-delayed-discharges.Rmd). 
 
