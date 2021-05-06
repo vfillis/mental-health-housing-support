@@ -22,7 +22,15 @@ Additionally, the Mental Health Services Monhtly Statistics include data on [mon
 
 ## Number of mental health beds and bed occupancy 
 
+Quarterly bed availability and occupancy data is [published by NHS England](https://www.england.nhs.uk/statistics/statistical-work-areas/bed-availability-and-occupancy/bed-data-overnight/). 
 
+The **Beds Time Series – 1987-88 to 2009-10** and **Beds Time-series 2010-11 onwards** show the development of available mental health beds over time. They were in different formats (one was yearly data and one was quarterly). 
+
+Because of this, I calculated the yearly average out of the quarterly bed statistics. 
+
+Bed availability data is available from 1987/88 and bed occupancy data is available from 2010/11. 
+
+The data can be found [here](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/mental-health-beds-and-occupancy.xlsx). 
 
 ## Accommodation status of mental health patients 
 
