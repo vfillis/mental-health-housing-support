@@ -1,22 +1,31 @@
 # Data analysis
 
-## Available data 
-NHS Digital publishes [Mental Health Services Monhtly Statistics](https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics). 
+Throughout the investigation, I have analysed different data / Different data sets have informed my reporting. 
 
-I downloaded the CSVs from April 2019 to January 2021 (latest available data) and merged them using the command line (cat *.csv > MHSDS2019to2020.csv) _after navigating with “cd” to the folder containing the CSVs. 
+I have looked at the number of hospital admissions, delayed discharges from hospital, available mental health beds and bed occupancy, and the accommodation status of mental health patients. 
 
-I then continued in R. 
+## Delayed discharges 
 
---> link to markdowns 
+The [Mental Health Services Monhtly Statistics](https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics), published by NHS Digital, contains data on delayed discharges. Delayed discharges occur when a patient, despite being medically fit to be discharged, cannot be discharged from hospital. This can happen for a number of different reasons.
 
-I analysed the data over time, but whenenver there was no change (which was mostly the case) I visualised the latest available data/only used the latest available data in my reporting instead of looking at the measures over time. 
+Mental Health Services Monhtly Statistics include data on monthly delayed discharge days, who the delayed discharge days are attributed to and the reasons for the delayed discharge days. 
 
-## Delayed discharges
+At first, I downloaded the CSVs from April 2019 to January 2021 (latest available data) and merged them using the command line (cat *.csv > MHSDS2019to2020.csv) _after navigating with “cd” to the folder containing the CSVs. 
 
-## Recorded accommodation status
+I then analysed the data in R. The script can be found [here](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/MHSDS-admissions-delayed-discharges.Rmd). 
 
-## Bed occupancy 
+I analysed the data over time, but whenenver there was no change (which was mostly the case) I only used the latest available data in my reporting instead of looking at the figures over time. 
 
-## FOI: accommodation code  
+[This is the final data I have used in my article](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/MHSDS-delayed-discharge-reasons.xlsx).
 
-## FOI: housing support workers 
+Additionally, the Mental Health Services Monhtly Statistics include data on [monthly hospital admissions](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/MHSDS-England-admissions-discharges.xlsx).
+
+## Number of mental health beds and bed occupancy 
+
+
+
+## Accommodation status of mental health patients 
+
+I have obtained national data on the accommodation status of patients who are in contact with adult mental health services [through Freedom of Information requests](https://github.com/vfillis/mental-health-housing/tree/main/FOIs/Accommodation%20Code). 
+
+The cleaned data can be found [here](https://github.com/vfillis/mental-health-housing/blob/main/Data%20analysis/FOI-accommodation-status-England.xlsx). 
