@@ -1,4 +1,4 @@
-# Mental health and housing
+# The available housing support in mental health services
 
 **["My basic needs were not met at all" — thousands of mental health patients experiencing homelessness](https://vfillis.github.io/html/mental-health-and-housing.html)**
 
@@ -11,6 +11,7 @@ The investigation revealed how a hospital stay can lead to homelessness, the eff
 You can read the full story [here](https://vfillis.github.io/html/mental-health-and-housing.html). 
 
 ## Get the data
+
 Data on the accommodation status of mental health patients as well as dedicated housing support staff has been obtained through Freedom of Information requests. The data is available on national and trust level. You can find out more about it [here](https://github.com/vfillis/mental-health-housing/tree/main/FOIs). 
 
 ## Visualisation 
