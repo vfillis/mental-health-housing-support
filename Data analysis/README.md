@@ -1,6 +1,6 @@
 # Data analysis
 
-Throughout the investigation, I have analysed different data / Different data sets have informed my reporting. 
+Throughout the investigation, different data sets have informed my reporting. 
 
 I have looked at the number of hospital admissions, delayed discharges from hospital, available mental health beds and bed occupancy, and the accommodation status of mental health patients. 
 
